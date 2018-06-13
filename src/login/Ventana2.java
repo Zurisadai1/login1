@@ -36,80 +36,168 @@ public class Ventana2 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        btnMostrar = new javax.swing.JPanel();
         lblOpcion = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        lstListado = new javax.swing.JList<>();
+        jButton1 = new javax.swing.JButton();
+
+        jLabel1.setText("jLabel1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         lblOpcion.setText("Seleccione la opccion ");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Opcion 1", "Opcion 2", "Opcion 3", "Opcion 4", " " }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "WhatsAppp", "Instagram ", "Snaph", "Facebook", " ", " " }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
             }
         });
 
+        lstListado.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "opcion  1", "opcion  2", "opcion  3", "opcion  4", "opcion  5", "opcion  6" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane1.setViewportView(lstListado);
+
+        jButton1.setText("opción");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout btnMostrarLayout = new javax.swing.GroupLayout(btnMostrar);
+        btnMostrar.setLayout(btnMostrarLayout);
+        btnMostrarLayout.setHorizontalGroup(
+            btnMostrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnMostrarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(btnMostrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(btnMostrarLayout.createSequentialGroup()
+                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(btnMostrarLayout.createSequentialGroup()
+                        .addComponent(lblOpcion, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(btnMostrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(btnMostrarLayout.createSequentialGroup()
+                                .addGap(77, 77, 77)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 146, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnMostrarLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jButton1)
+                                .addGap(44, 44, 44))))))
+        );
+        btnMostrarLayout.setVerticalGroup(
+            btnMostrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnMostrarLayout.createSequentialGroup()
+                .addGroup(btnMostrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(btnMostrarLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(lblOpcion, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(btnMostrarLayout.createSequentialGroup()
+                        .addGap(49, 49, 49)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton1)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 121, Short.MAX_VALUE)
+                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34))
+        );
+
+        lblOpcion.getAccessibleContext().setAccessibleName("");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(137, 137, 137)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblOpcion))
-                .addContainerGap(160, Short.MAX_VALUE))
+                .addGap(21, 21, 21)
+                .addComponent(btnMostrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(24, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(105, 105, 105)
-                .addComponent(lblOpcion)
-                .addGap(31, 31, 31)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(130, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(btnMostrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(25, Short.MAX_VALUE))
         );
-
-        lblOpcion.getAccessibleContext().setAccessibleName("");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         int op = jComboBox1.getSelectedIndex();
+        String cadena= jComboBox1.getSelectedItem().toString();
 
         switch (op) {
             case 0:
+                this.mostrarImagen("/img/was.png", op+1, cadena);
+                /*
                 JOptionPane.showMessageDialog(null, "numero 1", "opcion selecionada", JOptionPane.INFORMATION_MESSAGE, new ImageIcon("src/img/was.png"));
                 // lblOpcion.setText("Seleccionó la opcion 1");
                 // primer metodo
                 lblOpcion.setIcon(new ImageIcon("src/img/was.png"));
                 lblOpcion.setText(null);
+                */
                 break;
-            case 1:
+            case 1:this.mostrarImagen("/img/insta.png",op+1, cadena);
+            /*
                 JOptionPane.showMessageDialog(null, "numero 1", "opcion selecionada", JOptionPane.INFORMATION_MESSAGE, new ImageIcon("src/img/insta.png"));
                 // lblOpcion.setText("Seleccionó la opcion 2");
                 lblOpcion.setIcon(new ImageIcon("src/img/insta.png"));
                 lblOpcion.setText(null);
+            */
                 break;
             case 2:
+                this.mostrarImagen("/img/es.png", op+1, cadena);
+                /*
                 JOptionPane.showMessageDialog(null, "numero 1", "opcion selecionada", JOptionPane.INFORMATION_MESSAGE, new ImageIcon("src/img/es.png"));
                 // lblOpcion.setText("Seleccionó la opcion 3");
                 lblOpcion.setIcon(new ImageIcon("src/img/es.png"));
                 lblOpcion.setText(null);
+                 */
                 break;
             // segunda manera
             case 3:
-
+                this.mostrarImagen("/img/face.png", op+1, cadena);
+                /*
                 ruta = "/img/face.png";
                 url = this.getClass().getResource(ruta);
                 icon = new ImageIcon(url);
                 lblOpcion.setIcon(icon);
                 lblOpcion.setText(null);
+                 */
                 break;
+
         }// TODO add your handling code here:
     }//GEN-LAST:event_jComboBox1ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+int opc = lstListado.getSelectedIndex();
+switch (opc){
+    case -1:
+        JOptionPane.showMessageDialog(this,"no selecciono nada",+ opc + "Error", JOptionPane.ERROR_MESSAGE);
+        break;
+    case 0:
+    case 1:
+    case 2:
+    case 3:
+    case 4: mostrarCuadro(opc+1);
+        break;
+       }
+    }
+    public void mostrarCuadro(int op){
+JOptionPane.showMessageDialog(null, "opción No:" + op, "Opción selecionada", JOptionPane.INFORMATION_MESSAGE);
+
+
+// TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -146,8 +234,27 @@ public class Ventana2 extends javax.swing.JFrame {
         });
     }
 
+    public void mostrarImagen(String urlImagen, int opcion, String cadena) {
+        url = this.getClass().getResource(urlImagen);
+        icon = new ImageIcon(url);
+        lblOpcion.setIcon(icon);
+        lblOpcion.setText("opcion: " + opcion + " Texto: " +cadena);
+    }
+  // gat  
+/*public void mostrarImagen(String urlImagen) {
+        ruta = urlImagen;
+        url = this.getClass().getResource(ruta);
+        icon = new ImageIcon(url);
+        lblOpcion.setIcon(icon);
+        lblOpcion.setText(null);
+    }*/
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel btnMostrar;
+    private javax.swing.JButton jButton1;
     private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblOpcion;
+    private javax.swing.JList<String> lstListado;
     // End of variables declaration//GEN-END:variables
 }
